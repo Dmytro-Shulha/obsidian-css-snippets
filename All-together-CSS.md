@@ -2196,6 +2196,8 @@ div.popover.hover-popover, .menu, .suggestion-container {
   border: none;
 }
 ```
+## Oval, call-out, in sidebar
+There is an amazing piece of CSS code by [Lithou](https://forum.obsidian.md/t/how-to-achieve-css-code-snippets/8474/35?u=klaas) on the forum. I have not copied the code here because it is important to 1<sup>st</sup> see what it does. Also, check out his video that he links to.
 
 # Status bar
 ```css

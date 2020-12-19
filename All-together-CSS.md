@@ -2303,7 +2303,7 @@ div.popover.hover-popover, .menu, .suggestion-container {
 }
 
 /* Images with a piece of scotch tape effect */
-/* After putting the code below, you can get the tape effect doing ![[imagename.png#tape]]
+/* After putting the code below, you can get the tape effect doing ![[imagename.png#tape]] */
 div[src$="#tape"]::before {
   content: "";
   display: block;

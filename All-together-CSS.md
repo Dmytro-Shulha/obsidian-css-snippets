@@ -2302,7 +2302,8 @@ div.popover.hover-popover, .menu, .suggestion-container {
   box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
 }
 
-/* Stickies with a piece of scotch tape effect */
+/* Images with a piece of scotch tape effect */
+/* After putting the code below, you can get the tape effect doing ![[imagename.png#tape]]
 div[src$="#tape"]::before {
   content: "";
   display: block;

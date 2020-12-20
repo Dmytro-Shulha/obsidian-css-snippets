@@ -17,3 +17,25 @@ color: #5cc863;
   color: #fde725; 
 }
 ```
+
+Might work as well:
+```css
+.graph-view.color-fill {
+  color: var(--background-secondary);
+}
+.graph-view.color-circle {
+  color: var(--text-normal);
+}
+.graph-view.color-line {
+  color: var(--background-modifier-border);
+}
+.graph-view.color-text {
+  color: var(--text-normal);
+}
+.graph-view.color-fill-highlight {
+  color: var(--interactive-accent);
+}
+.graph-view.color-line-highlight {
+  color: rgb(var(--interactive-accent-rgb));
+}
+```

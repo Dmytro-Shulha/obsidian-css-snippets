@@ -71,3 +71,29 @@ input[type=checkbox]:checked {
     color: inherit;
 }
 ```
+
+```css
+/* CHECKBOX: Green / Red color */
+
+.markdown-preview-view .task-list-item-checkbox{
+    -webkit-appearance: none;
+  box-sizing: border-box;
+  border: 1px solid var(--text-muted);
+  border-radius: 2px;
+  position: relative;
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0;
+  outline: none;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  vertical-align: baseline;
+
+  background-color: #d068688f;
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked {
+  background-color: #68d0688f;
+}
+```

@@ -1,27 +1,16 @@
 {
   "main": {
-    "id": "f7f0eed103116580",
+    "id": "bee94ef7f87884e6",
     "type": "split",
     "children": [
       {
-        "id": "1f239c22c0d94400",
+        "id": "4b4c66a2de127bae",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "All-together-CSS.md",
-            "mode": "source"
-          }
-        }
-      },
-      {
-        "id": "ec06e5be53c43fea",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "README.md",
+            "file": "Snippets/Ribbons.md",
             "mode": "source"
           }
         }
@@ -30,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "879bdafd3bf7a7a4",
+    "id": "c026ab178b08668f",
     "type": "split",
     "children": [
       {
-        "id": "778485f25d6ad1bc",
+        "id": "c5c97efff74f1b68",
         "type": "tabs",
         "children": [
           {
-            "id": "8c56ae81c038caa9",
+            "id": "25458c69901c3e9c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -46,12 +35,12 @@
             }
           },
           {
-            "id": "d3b4cca0e6559960",
+            "id": "e97040667dea0db9",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Popup",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -67,20 +56,20 @@
     "width": 300
   },
   "right": {
-    "id": "2f0f8e317e9c7c56",
+    "id": "9ec1163470bf4dd9",
     "type": "split",
     "children": [
       {
-        "id": "46b2518eb0f66fd6",
+        "id": "9e58d60dddaed0e2",
         "type": "tabs",
         "children": [
           {
-            "id": "2652a44c0f8c2588",
+            "id": "05d52fa3c3c1d868",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "All-together-CSS.md",
+                "file": "Snippets/Ribbons.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,19 +77,8 @@
                 "unlinkedCollapsed": true
               }
             }
-          },
-          {
-            "id": "4ed708303b00aec0",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "All-together-CSS.md"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -108,15 +86,14 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "All-together-CSS.md",
-    "README.md",
-    "Snippets/Yaml.md",
-    "Snippets/WYSIWYG.md",
-    "Snippets/URLs.md",
-    "Snippets/Tooltip.md",
-    "Snippets/Title bar.md",
-    "Snippets/Tag pills.md",
+    "Snippets/Ribbons.md",
+    "Snippets/Outliner pane.md",
     "Snippets/Table.md",
-    "Snippets/Status bar.md"
+    "Snippets/Popover-Popup.md",
+    "Snippets/Embeds.md",
+    "Snippets/Block quote.md",
+    "Snippets/Check box.md",
+    "Snippets/Graph nodes.md",
+    "All-together-CSS.md"
   ]
 }

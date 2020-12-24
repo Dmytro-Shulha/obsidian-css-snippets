@@ -2430,28 +2430,26 @@ table tr td:last-child {
 # Tag pills
 ```css
 /* Tag pills in edit mode */
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end:before {
-    content: '#';
-}
-.tag, div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end {
+.CodeMirror-line span.cm-hashtag-begin {
   background-color: var(--text-accent);
-  border: none;
-  color: white !important;
-  font-size: 13px;
-  padding: 1px 8px;
-  text-align: center;
-  text-decoration: none !important;
+  color: white;
+  border-top-left-radius:15px;
+  border-bottom-left-radius:15px;
+  padding-left:8px;
+  border-right:none;
   display: inline-block;
-  margin: 1px 1px;
-  cursor: pointer;
-  border-radius: 14px;
+  text-decoration: none !important;
 }
-.tag:hover {
-color: white;
-background-color: var(--text-accent-hover);
-}
-.tag[href^="#obsidian"] {
-  background-color: #4d3ca6;
+
+.CodeMirror-line span.cm-hashtag-end {
+  background-color: var(--text-accent);
+  color: white;
+  border-top-right-radius:15px;
+  border-bottom-right-radius:15px;
+  padding-right:8px;
+  border-left:none;
+  display: inline-block;
+  text-decoration: none !important;
 }
 
 /* Tag pills in tag pane */

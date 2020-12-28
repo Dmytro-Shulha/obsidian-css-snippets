@@ -1260,6 +1260,9 @@ details > p {
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
+
+/* Note: to include a clickable external link in the block, use
+/* `<a href="https://your-site.com">Some text</a>`
 ```
 
 # Hyphenation-Justification

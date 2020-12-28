@@ -1239,6 +1239,7 @@ font-size: 0.6em;
 }
 
 /* Disclosure widget for a block ot text */
+/* Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#Providing_a_summary */
 details {
   font: 16px "Open Sans", Calibri, sans-serif;
   width: 620px;
@@ -1262,7 +1263,7 @@ details > p {
 }
 
 /* Note: to include a clickable external link in the block, use
-/* `<a href="https://your-site.com">Some text</a>`
+/* `<a href="https://your-site.com">Some text</a>` */
 ```
 
 # Hyphenation-Justification

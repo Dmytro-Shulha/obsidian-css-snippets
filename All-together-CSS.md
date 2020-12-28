@@ -1237,6 +1237,29 @@ font-size: 0.6em;
 .cm-s-obsidian span.cm-comment {
   color: var(--base4);
 }
+
+/* Disclosure widget for a block ot text */
+details {
+  font: 16px "Open Sans", Calibri, sans-serif;
+  width: 620px;
+}
+
+details > summary {
+  padding: 2px 6px;
+  width: 15em;
+  background-color: #ddd;
+  border: none;
+  box-shadow: 3px 3px 4px black;
+  cursor: pointer;
+}
+
+details > p {
+  border-radius: 0 0 10px 10px;
+  background-color: #ddd;
+  padding: 2px 6px;
+  margin: 0;
+  box-shadow: 3px 3px 4px black;
+}
 ```
 
 # Hyphenation-Justification

@@ -1,30 +1,7 @@
 # Special effects
-## Translucent modals and popovers
-```css
-/* Translucent modals - from: Nosedive-Obsidian */
-/* Modify modal, omnibar, open looks */
-input.prompt-input, input.prompt-input:active, input.prompt-input:focus {
-  border-radius: 3px;
-  border: 2px solid rgba(38, 38, 59, 0.5); /* in the original code this is var(--text-muted) */
-  background-color: transparent;
-  box-sizing: border-box;
-  border-collapse: collapse;
-}
-
-.modal-bg {
-  background-color: #FFFFFF01;
-  backdrop-filter: blur(20px);
-}
-
-/* Make legible background for menus since we overrode the background */
-div.popover.hover-popover, .menu, .suggestion-container {
-  background-color: #FFFFFF01;
-  backdrop-filter: blur(30px);
-  border: none;
-}
-```
-## Oval, call-out, in sidebar
-/* There is an amazing piece of CSS code by [Lithou](https://forum.obsidian.md/t/how-to-achieve-css-code-snippets/8474/35?u=klaas) on the forum. I have not copied the code here because it is important to 1<sup>st</sup> see what it does. Also, check out his video that he links to.
+## Images - oval, banner, call-out
+/* From Lithou - some 250 lines of code, which I have not added here.
+/* I recommend visiting Lithou's Github page (http://github.com/lithou/sandbox), read his spiel, then download pub-Image_Flags.css */
 
 ## Sticky notes
 /* From Gabroel - https://discord.com/channels/686053708261228577/702656734631821413/789334135788273724 and scroll down that page. Code was not quite correct, so here is the right code. */
@@ -153,5 +130,30 @@ div[src$="#tape"] {
   -o-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(2deg);
+}
+```
+
+## Translucent modals and popovers
+```css
+/* Translucent modals - from: Nosedive-Obsidian */
+/* Modify modal, omnibar, open looks */
+input.prompt-input, input.prompt-input:active, input.prompt-input:focus {
+  border-radius: 3px;
+  border: 2px solid rgba(38, 38, 59, 0.5); /* in the original code this is var(--text-muted) */
+  background-color: transparent;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+.modal-bg {
+  background-color: #FFFFFF01;
+  backdrop-filter: blur(20px);
+}
+
+/* Make legible background for menus since we overrode the background */
+div.popover.hover-popover, .menu, .suggestion-container {
+  background-color: #FFFFFF01;
+  backdrop-filter: blur(30px);
+  border: none;
 }
 ```

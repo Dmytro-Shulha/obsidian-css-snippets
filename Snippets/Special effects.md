@@ -3,6 +3,20 @@
 /* From Lithou - some 250 lines of code, which I have not added here.
 /* I recommend visiting Lithou's Github page (http://github.com/lithou/sandbox), read his spiel, then download pub-Image_Flags.css */
 
+## Side notes
+/* use this syntax: <aside>some text</aside>
+aside {
+  float: right;
+  border: 1px solid lightgrey;
+  padding: 8px;
+  position: relative;
+  left: 10px;
+  top: 20px;
+  width: 155px;
+  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+  color: var(--text-accent);
+}
+
 ## Sticky notes
 /* From Gabroel - https://discord.com/channels/686053708261228577/702656734631821413/789334135788273724 and scroll down that page. Code was not quite correct, so here is the right code. */
 ```css

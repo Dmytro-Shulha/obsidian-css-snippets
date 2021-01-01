@@ -3,8 +3,15 @@
 /* From Lithou - some 250 lines of code, which I have not added here.
 /* I recommend visiting Lithou's Github page (http://github.com/lithou/sandbox), read his spiel, then download pub-Image_Flags.css */
 
-## Side notes
-/* use this syntax: <aside>some text</aside>
+## Side note in a boxes
+/* There are 3 options:
+1. boxes in 1 column, text-wrapped
+2. boxes in 1 column, not text-wrapped
+3. boxes in 2 columns, not text-wrapped
+
+/* Option 1 (https://discord.com/channels/686053708261228577/702656734631821413/793912210689753098)
+/* use this syntax: <aside>some text</aside> */
+```css
 aside {
   float: right;
   border: 1px solid lightgrey;
@@ -16,6 +23,64 @@ aside {
   box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
   color: var(--text-accent);
 }
+```
+
+/* Option 2 (https://discord.com/channels/686053708261228577/702656734631821413/794202591683805184)
+/* syntax: <aside><p>some text</aside>
+/* and at the top of the note put a cssclass: sidecomments */
+```css
+aside {
+    float: right;
+    width: 0px;
+}    
+
+aside > p {
+    border: 1px solid lightgrey;
+    padding: 8px;
+    margin-left:20px;
+    width: 185px;
+    box-shadow: 5px 8px lightgrey;
+    color: brown;
+}
+
+.is-readable-line-width.sidecomments .markdown-preview-sizer {
+    
+    margin-left: 20px !important;   
+}
+```
+
+/* Option 3 (https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764)
+/* Read the comments in the link for implementation */
+
+```css
+aside {
+    float: right;
+    width: 0px;
+    position:relative;
+}
+
+aside > h1, aside > h2{
+    font-weight:normal !important;
+    font-size:16px !important;
+    border: 1px solid lightgrey;
+    padding: 8px;
+    width: 185px;
+    box-shadow: 5px 8px lightgrey;
+    color: brown !important    ;
+    position: absolute;
+    left: 20px;
+}
+
+aside > h2 {
+    left: 225px;
+    color: darkorchid !important;
+}
+
+
+.is-readable-line-width.sidecomments .markdown-preview-sizer {
+    margin-left: 20px !important;
+}
+```
 
 ## Sticky notes
 /* From Gabroel - https://discord.com/channels/686053708261228577/702656734631821413/789334135788273724 and scroll down that page. Code was not quite correct, so here is the right code. */

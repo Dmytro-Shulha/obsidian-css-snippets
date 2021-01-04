@@ -27,8 +27,60 @@ blockquote {
   flex-direction: column;
   justify-content: center;
 }
+```
 
-/* As per Obsidianite */
+## Blockquote as per Obsidianite
+/* in Edit mode
+```css
+.cm-quote {
+    color: var(--text-normal) !important;
+  }
+  
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
+  color: transparent !important;
+  display: inline !important;
+}  
+  
+div:not(.CodeMirror-activeline)>.HyperMD-quote {
+  border-left: 4px solid var(--text-selection);
+  border-color: var(--text-accent);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  line-height: 1.3em;
+  padding: 12px 0px 15px 8.5px; /* or 12px 15px 15px 8.5px ? */
+  margin-right: 15px !important;
+  margin-left: 15px !important; /* or 5px ? */
+  border-top: transparent;
+  border-bottom: transparent;
+  background: linear-gradient(120deg, var(--background-secondary), var(--text-faint));
+  display: inline-block;
+}
+  
+div:not(.CodeMirror-activeline)>.HyperMD-quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 2px;
+  width: 60%;
+  background: linear-gradient(90deg, var(--text-accent), var(--text-faint));
+}
+  
+div:not(.CodeMirror-activeline)>.HyperMD-quote::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  height: 2px;
+  width: 25%;
+  background: linear-gradient(90deg, var(--text-accent), var(--text-faint));
+}
+```
+
+/* in Preview mode */
+```css
 .markdown-preview-view blockquote {
   position: relative;
   padding: 1rem 2rem 1rem 3rem;
@@ -71,17 +123,6 @@ blockquote {
 .markdown-preview-view blockquote p {
   position: relative;
 }
-
-.markdown-preview-view blockquote p:first-of-type::before {
-  content: '“';
-  font: 14px/20px italic Times, serif;
-  font-weight: 700;
-  font-size: 3em;
-  color: var(--base2); /* PB changed from var(--text-accent) */
-  position: absolute;
-  top: 0.1rem;
-  left: -1.8rem;
-}
 ```
 
 ## Quotation marks
@@ -96,6 +137,35 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 blockquote p { display: inline; }
+```
+
+/* as per Obsidianite */
+/* in Edit mode */
+```css
+div:not(.CodeMirror-activeline)>.HyperMD-quote>span:first-of-type::before {
+  content: '“' !important;
+  font: 14px/20px italic Times, serif;
+  font-weight: 700;
+  font-size: 3em;
+  color: var(--text-accent);
+  left: 3px;
+  top: 15px;
+  position: relative;
+}
+```
+
+/* in Preview mode */
+```css
+.markdown-preview-view blockquote p:first-of-type::before {
+  content: '“';
+  font: 14px/20px italic Times, serif;
+  font-weight: 700;
+  font-size: 3em;
+  color: var(--text-accent);
+  position: absolute;
+  top: 0.1rem;
+  left: -1.8rem;
+}
 ```
 
 ## Signature: name of the person quoted

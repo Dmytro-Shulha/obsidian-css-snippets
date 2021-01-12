@@ -4,13 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "4b4c66a2de127bae",
+        "id": "da7e6339a6a327cb",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "All-together-CSS.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "ec0926cd65604140",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Snippets/Ribbons.md",
+            "file": "All-together-CSS.md",
             "mode": "source"
           }
         }
@@ -69,12 +80,22 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Snippets/Ribbons.md",
+                "file": "All-together-CSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f74ee500b35d0d02",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "All-together-CSS.md"
               }
             }
           }
@@ -86,14 +107,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "All-together-CSS.md",
+    "Snippets/Special effects.md",
+    "Snippets/Lists - (un)ordered.md",
+    "Snippets/Links.md",
+    "Snippets/Images.md",
+    "Snippets/Tag pills.md",
+    "Snippets/Hyphenation-Justification.md",
+    "Snippets/HTML.md",
     "Snippets/Ribbons.md",
-    "Snippets/Outliner pane.md",
-    "Snippets/Table.md",
-    "Snippets/Popover-Popup.md",
-    "Snippets/Embeds.md",
-    "Snippets/Block quote.md",
-    "Snippets/Check box.md",
-    "Snippets/Graph nodes.md",
-    "All-together-CSS.md"
+    "Snippets/Outliner pane.md"
   ]
 }

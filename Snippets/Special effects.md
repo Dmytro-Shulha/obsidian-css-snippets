@@ -1,86 +1,30 @@
 # Special effects
-## Images - oval, banner, call-out
-/* From Lithou - some 250 lines of code, which I have not added here.
-/* I recommend visiting Lithou's Github page (http://github.com/lithou/sandbox), read his spiel, then download pub-Image_Flags.css */
-
-## Side note in a boxes
-/* There are 3 options:
-1. boxes in 1 column, text-wrapped
-2. boxes in 1 column, not text-wrapped
-3. boxes in 2 columns, not text-wrapped
-
-/* Option 1 (https://discord.com/channels/686053708261228577/702656734631821413/793912210689753098)
-/* use this syntax: <aside>some text</aside> */
+## Translucent modals and popovers
 ```css
-aside {
-  float: right;
-  border: 1px solid lightgrey;
-  padding: 8px;
-  position: relative;
-  left: 10px;
-  top: 20px;
-  width: 155px;
-  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
-  color: var(--text-accent);
+/* Translucent modals - from: Nosedive-Obsidian */
+/* Modify modal, omnibar, open looks */
+input.prompt-input, input.prompt-input:active, input.prompt-input:focus {
+  border-radius: 3px;
+  border: 2px solid rgba(38, 38, 59, 0.5); /* in the original code this is var(--text-muted) */
+  background-color: transparent;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+.modal-bg {
+  background-color: #FFFFFF01;
+  backdrop-filter: blur(20px);
+}
+
+/* Make legible background for menus since we overrode the background */
+div.popover.hover-popover, .menu, .suggestion-container {
+  background-color: #FFFFFF01;
+  backdrop-filter: blur(30px);
+  border: none;
 }
 ```
-
-/* Option 2 (https://discord.com/channels/686053708261228577/702656734631821413/794202591683805184)
-/* syntax: <aside><p>some text</aside>
-/* and at the top of the note put a cssclass: sidecomments */
-```css
-aside {
-    float: right;
-    width: 0px;
-}    
-
-aside > p {
-    border: 1px solid lightgrey;
-    padding: 8px;
-    margin-left:20px;
-    width: 185px;
-    box-shadow: 5px 8px lightgrey;
-    color: brown;
-}
-
-.is-readable-line-width.sidecomments .markdown-preview-sizer {
-    
-    margin-left: 20px !important;   
-}
-```
-
-/* Option 3 (https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764)
-/* Read the comments in the link for implementation */
-
-```css
-aside {
-    float: right;
-    width: 0px;
-    position:relative;
-}
-
-aside > h1, aside > h2{
-    font-weight:normal !important;
-    font-size:16px !important;
-    border: 1px solid lightgrey;
-    padding: 8px;
-    width: 185px;
-    box-shadow: 5px 8px lightgrey;
-    color: brown !important    ;
-    position: absolute;
-    left: 20px;
-}
-
-aside > h2 {
-    left: 225px;
-    color: darkorchid !important;
-}
-
-
-.is-readable-line-width.sidecomments .markdown-preview-sizer {
-    margin-left: 20px !important;
-}
-```
+## Oval, call-out, in sidebar
+/* There is an amazing piece of CSS code by [Lithou](https://forum.obsidian.md/t/how-to-achieve-css-code-snippets/8474/35?u=klaas) on the forum. I have not copied the code here because it is important to 1<sup>st</sup> see what it does. Also, check out his video that he links to.
 
 ## Sticky notes
 /* From Gabroel - https://discord.com/channels/686053708261228577/702656734631821413/789334135788273724 and scroll down that page. Code was not quite correct, so here is the right code. */
@@ -185,54 +129,211 @@ aside > h2 {
   box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
 }
 
-/* Images with a piece of scotch tape effect */
+/* Images with a piece of scotch tape effect - thanks to Lithou*/
+/* placement of images */
 /* After putting the code below, you can get the tape effect doing ![[imagename.png#tape]] */
-div[src$="#tape"]::before {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 30px;
-  position: relative;
-  top: 10px;
-  margin: auto;
-  background: rgba(255,255,200,0.6);
-  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-  z-index: 10;
+/* refer to Lithou's sandbox https://github.com/lithou/sandbox */
+
+div{
+    --coremarg: 1%; 
+    --extramarg: 1%; /* This margin is used for any added margin between items */
+    --defaultwidth: 60%; /*This is the default width for core flags such as the "side" and "tape" */
 }
 
-div[src$="#tape"] {
-  float: right;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(2deg);
-}
-```
+/* Core Flags */
+    /*side */
+        div[alt*="+side"]{
+            position: relative;
+            width: var(--defaultwidth);
+            float: right;
+            margin: 0px;
+            margin-left: var(--coremarg);
+        }
+        
+    /*tape */
+        div[alt*="+tape"] {
+            position: relative;
+            float: right;
+            width: var(--defaultwidth);
+            margin-left: var(--coremarg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(2deg);
+        }
 
-## Translucent modals and popovers
-```css
-/* Translucent modals - from: Nosedive-Obsidian */
-/* Modify modal, omnibar, open looks */
-input.prompt-input, input.prompt-input:active, input.prompt-input:focus {
-  border-radius: 3px;
-  border: 2px solid rgba(38, 38, 59, 0.5); /* in the original code this is var(--text-muted) */
-  background-color: transparent;
-  box-sizing: border-box;
-  border-collapse: collapse;
+        div[alt*="+tape"]::before {
+            content: "";
+            display: block;
+            position: relative;
+            margin: auto;
+            width: 100px;
+            height: 30px;
+            top: 12px;
+            background: rgba(255, 234, 118, 0.377); /*here you can chosse the scotch tape background*/
+            -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+            -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+            z-index: 10;
+            clip-path: polygon(50% 0%, 100% 0%, 
+            98% 10%, 100% 20%, 98% 30%, 100% 40%, 98% 50%, 100% 60%, 98% 70%, 100% 80%, 98% 90%,100% 100%,
+            0% 100%, 2% 90%, 0% 80%, 2% 70%, 0% 60%, 2% 50%, 0% 40%, 2% 30%, 0% 20%, 2% 10%, 0% 0%);  
+        }
+        div[alt*="-lg"]::before{
+            width: 100px;
+            height: 30px;
+        }
+
+        div[alt*="-med"]::before{
+            width: 70px;
+            height: 25px;
+        }
+
+        div[alt*="-sm"]::before{
+            width: 45px;
+            height: 15px;
+            top: 8px;
+        }
+        div[alt*="-thumb"]::before{
+            width: 25px;
+            height: 5px;
+            top: 2px;
+        }
+    /* Push Pin */
+        div[alt*="+pin"] {
+            position: relative;
+            float: right;
+            width: var(--defaultwidth);
+            margin: auto;
+            margin-left: var(--coremarg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(2deg);}
+        div[alt*="+pin"]::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #4588cc;
+            top: -3%;
+            left: 50%;
+            border: solid #336699 8px;
+            border-radius: 50%;
+            box-shadow: #274d74 -5px 3px 1px;}
+    /* Portrait and Landscape */
+        div[alt*="+portrait"]{
+            position: relative;
+            width: calc(var(--defaultwidth)/2);
+            float: right;
+            /* background-color:blue; This setting will create a border effect of set color */
+            clip-path: ellipse(36% 46% at 50% 50%);}
+        div[alt*="+portrait"]>img{
+            vertical-align: middle;
+            clip-path: ellipse(35% 45% at 50% 50%);}
+        div[alt*="+landscape"]{
+            position: relative;
+            width: var(--defaultwidth);
+            float: right;
+            /* background-color:blue; This setting will create a border effect of set color */
+            clip-path: ellipse(46% 36% at 50% 50%);}
+        div[alt*="+landscape"]>img{
+            vertical-align: middle;
+            clip-path: ellipse(45% 35% at 50% 50%);}
+
+    /* Banner and HR */
+        div[alt*="+banner"]{
+            height: 100px;
+            overflow: hidden;
+
+        }
+
+        div[alt*="+banner"]>img{
+            margin-top: -130px;
+            }
+
+        div[alt*="+hr"]{
+            height: 10px;
+            overflow: hidden;
+            border-radius: 20px;
+
+        }
+
+        div[alt*="+hr"]>img{
+            margin-top: -200px;
+            }
+        
+
+    /*Custom Core Flags */
+    div[alt*="+custom1"]{
+        position: relative;
+        width: var(--defaultwidth);
+        float: right;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    div[alt*="+custom2"]{
+        position: relative;
+        width: var(--defaultwidth);
+        float: right;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+/* Modifier Flags */
+    /* Orientation and position */
+        div[alt*="-left"]{
+            float: left;
+            margin: 0px;
+            margin-right: var(--extramarg);}
+        div[alt*="-right"]{
+            float: right;
+            margin: 0px;
+            margin-left: var(--extramarg);}
+        div[alt*="-fix"]{position: fixed;}
+        div[alt*="-abs"]{position: absolute;}
+
+    /* Size */
+        div[alt*="-thumb"]{width: 11.50%;}
+        div[alt*="-sm"]{width: 24%;}
+        div[alt*="-med"]{width: 32.3333%;}
+        div[alt*="-lg"]{width: 49%;}
+        div[alt*="-huge"]{width: 67%;}
+        div[alt*="-cwidth"]{float: none;margin-left: -10%;width: 120%;}
+
+/* Borders */
+div[alt*="-border1"]>img{border: solid black 3px;}
+div[alt*="-border2"]>img{border: solid white 3px;}
+div[alt*="-bradius1"]>img{border-radius: 5px;}
+div[alt*="-bradius2"]>img{border-radius: 20px;}
+div[alt*="-bradiustl"]>img{border-top-left-radius: 20px;}
+div[alt*="-bradiusbr"]>img{border-bottom-right-radius: 20px;}
+div[alt*="-bradiustr"]>img{border-top-right-radius: 20px;}
+div[alt*="-bradiusbl"]>img{border-bottom-left-radius: 20px;}
+div[alt*="-bthick"]>img{border-width: 5px;}
+div[alt*="-bthin"]>img{border-width: 1px;}
+
+/* Div Borders */
+div[alt*="-divborder1"]{border: solid #336699 2px;}
+div[alt*="-divborder2"]{border: solid black 2px;}
+div[alt*="-divbradius1"]{border-radius: 5px;}
+div[alt*="-divbradius2"]{border-radius: 20px;}
+div[alt*="-cdivbradius1"]{border-radius: 50px;}
+
+
+div[alt*="-shadow1"]>img{
+    box-shadow: darkgrey -2px 2px 2px;
+
 }
 
-.modal-bg {
-  background-color: #FFFFFF01;
-  backdrop-filter: blur(20px);
+
+div[alt*="-glow"]>img{
+    box-shadow: darkgrey 0px 0px 20px;
 }
 
-/* Make legible background for menus since we overrode the background */
-div.popover.hover-popover, .menu, .suggestion-container {
-  background-color: #FFFFFF01;
-  backdrop-filter: blur(30px);
-  border: none;
+div[alt*="-nofloat"]{
+    float:none
 }
 ```

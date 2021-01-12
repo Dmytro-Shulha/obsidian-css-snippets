@@ -43,6 +43,8 @@ OR
 ## Display side by side image grid
 [Obsidian forum](https://forum.obsidian.md/t/display-side-by-side-image-grid-css-snippet/9359) by Kepano
 
+
+
 ## Image as background
 
 ```css
@@ -53,7 +55,5 @@ OR
   background-size: cover;
   background-size: contain;
 }
-
-/*to use a local image, upload to the web (e.g. Imgur), then reference that */
-​```
 ```
+/*to use a local image, upload to the web (e.g. Imgur), then reference that */

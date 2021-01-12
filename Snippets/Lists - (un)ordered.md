@@ -1,4 +1,5 @@
 # Lists - (un)ordered
+
 ```css
 /* Reduce indentation in bullet lists */
 ol {
@@ -99,81 +100,6 @@ div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover{
 /*outline collapse indicator*/
 div.collapsible-item-collapse.collapse-icon{
   color: var(--text-accent);
-}
-```
-
-## Stylized lists
-/* Custom colors of the bullets in Edit mode; This controls the color of the list symbol, up to 6 levels deep
-/* courtesy of Entropic - Obsidian forum, https://forum.obsidian.md/t/custom-colors-for-lists-symbols-and-or-text-editor-only/11185?u=klaas */
-
-```css
-/* Unordered */
-
-.cm-formatting.cm-formatting-list.cm-formatting-list-ul.cm-list-1 {
-    color: red !important;
-    font-weight: bold;
-    font-size: large;
-}
-
-.cm-formatting.cm-formatting-list.cm-formatting-list-ul.cm-list-2 {
-    color: orange !important;
-    font-weight: bold;
-    font-size: large;
-}
-
-.cm-formatting.cm-formatting-list.cm-formatting-list-ul.cm-list-3 {
-    color: yellow !important;
-    font-weight: bold;
-    font-size: large;
-}
-
-.HyperMD-list-line.HyperMD-list-line-4 .cm-formatting-list-ul.cm-list-1 {
-    color: green !important;
-}
-
-.HyperMD-list-line.HyperMD-list-line-5 .cm-formatting-list-ul.cm-list-2 {
-    color: blue !important;
-}
-
-.HyperMD-list-line.HyperMD-list-line-6 .cm-formatting-list-ul.cm-list-3 {
-    color: purple !important;
-}
-
-/* Ordered */
-
-.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-1 {
-    color: red !important;
-}
-
-.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-2 {
-    color: orange !important;
-}
-
-.cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-list-3 {
-    color: yellow !important;
-}
-
-.HyperMD-list-line.HyperMD-list-line-4.CodeMirror-line .cm-formatting-list-ol.cm-list-1 {
-    color: green !important;
-}
-
-.HyperMD-list-line.HyperMD-list-line-5.CodeMirror-line .cm-formatting-list-ol.cm-list-2 {
-    color: blue !important;
-}
-
-.HyperMD-list-line.HyperMD-list-line-6.CodeMirror-line .cm-formatting-list-ol.cm-list-3 {
-    color: purple !important;
-}
-
-/* To control the colored bullet list text - please note you need to change the color to your taste */
-.HyperMD-list-line {
-    color: var(--frost3) !important;
-}
-
-/* To control the text color of the individual levels of colored bullets */
-/* To add additional levels just change the HyperMD-list-line-1 to whatever level you want. */
-.HyperMD-list-line.HyperMD-list-line-1.CodeMirror-line {
-    color: red !important;
 }
 ```
 

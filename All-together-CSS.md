@@ -1368,7 +1368,7 @@ a.external-link {
 /* This removes the space left over after the arrow is gone **/
   padding: 0;
 }
-
+```
 
 # Lists - (un)ordered
 

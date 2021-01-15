@@ -178,6 +178,13 @@ and of var(--text-faint) for not active */
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(0, 0, 0);"><path d="M21,4c0-1.103-0.897-2-2-2H5C3.897,2,3,2.897,3,4v16c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V4z M5,4h14v7H5V4z M5,20 v-7h14.001v7H5z"></path><path d="M14 7L10 7 10 6 8 6 8 9 16 9 16 6 14 6zM14 15L14 16 10 16 10 15 8 15 8 18 16 18 16 15z"></path></svg>');
 }
 
+.theme-light
+.workspace-tab-header[aria-label="File explorer"]:hover
+  .workspace-tab-header-inner-icon:after {
+  opacity: 0.5;
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(0, 125, 228);"><path d="M21,4c0-1.103-0.897-2-2-2H5C3.897,2,3,2.897,3,4v16c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V4z M5,4h14v7H5V4z M5,20 v-7h14.001v7H5z"></path><path d="M14 7L10 7 10 6 8 6 8 9 16 9 16 6 14 6zM14 15L14 16 10 16 10 15 8 15 8 18 16 18 16 15z"></path></svg>');
+}
+
 /* when the tab is in focus */
 .theme-light
 .workspace-tab-header[aria-label="File explorer"].is-active
@@ -191,6 +198,12 @@ and of var(--text-faint) for not active */
   .workspace-tab-header[aria-label="File explorer"]
   .workspace-tab-header-inner-icon:after {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(122,122,122);"><path d="M21,4c0-1.103-0.897-2-2-2H5C3.897,2,3,2.897,3,4v16c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V4z M5,4h14v7H5V4z M5,20 v-7h14.001v7H5z"></path><path d="M14 7L10 7 10 6 8 6 8 9 16 9 16 6 14 6zM14 15L14 16 10 16 10 15 8 15 8 18 16 18 16 15z"></path></svg>');
+}
+
+.theme-dark
+  .workspace-tab-header[aria-label="File explorer"]:hover
+  .workspace-tab-header-inner-icon:after {  
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(83, 170, 245);"><path d="M21,4c0-1.103-0.897-2-2-2H5C3.897,2,3,2.897,3,4v16c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V4z M5,4h14v7H5V4z M5,20 v-7h14.001v7H5z"></path><path d="M14 7L10 7 10 6 8 6 8 9 16 9 16 6 14 6zM14 15L14 16 10 16 10 15 8 15 8 18 16 18 16 15z"></path></svg>');
 }
 
 /* when the tab is in focus */

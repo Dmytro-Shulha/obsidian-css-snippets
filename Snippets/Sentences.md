@@ -244,10 +244,10 @@ a[href^="#video"] + mark {
 	padding-right: 8px;
 	font-weight: bold;
 }
-,,,
+```
 
 
-# Use nested tag to manage 16 highlight colors,bold,italic ,
+# Use nested tag to manage 16 highlight colors,bold,italic
 /* and toggle tag , works in edit mode and preview mode. 
 
 /*

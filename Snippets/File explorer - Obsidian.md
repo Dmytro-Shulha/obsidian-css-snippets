@@ -252,6 +252,7 @@ and of var(--text-faint) for not active */
 ```
 
 ## Top tab container background color
+```css
 .theme-dark {
   --background1: rgb(51, 51, 51);
 }
@@ -281,3 +282,4 @@ and of var(--text-faint) for not active */
 .workspace-tabs {
   background-color: var(--background1);
 }
+```

@@ -20,4 +20,10 @@
 .workspace-leaf.mod-active .view-header {
   border-right: 2px solid var(--base2) !important; /* change to border-bottom in non-AM */
 }
+
+/* Change color of note spine (Andy mode) */
+/* this is for Light theme; for Dark theme change words "theme-light" to "theme-dark" in the rule */
+body.theme-light.plugin-sliding-panes .view-header {
+    background-color: #f2f8fd;
+}
 ```

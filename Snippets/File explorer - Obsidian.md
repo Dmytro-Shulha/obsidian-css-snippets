@@ -232,7 +232,6 @@ and of var(--text-faint) for not active */
 ```
 
 ## Nav titles
-
 ```css
 /* Wrap long nav text */
 .nav-file-title, .nav-folder-title {
@@ -251,3 +250,34 @@ and of var(--text-faint) for not active */
   background-color: var(--base4);
 }
 ```
+
+## Top tab container background color
+.theme-dark {
+  --background1: rgb(51, 51, 51);
+}
+
+.theme-light {
+  --background1: #f2f8fd;
+}
+
+.workspace-tab-header-container {
+  background-color: var(--background1);
+}
+
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner {
+  background-color: var(--background1);
+}
+
+.workspace-tab-header,
+.workspace-tab-header-inner,
+.workspace-tab-container-before,
+.workspace-tab-container-after {
+  transition: none;
+}
+
+.workspace-tabs {
+  background-color: var(--background1);
+}

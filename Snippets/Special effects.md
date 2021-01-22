@@ -27,6 +27,10 @@ div.popover.hover-popover, .menu, .suggestion-container {
 /* There is an amazing piece of CSS code by [Lithou](https://forum.obsidian.md/t/how-to-achieve-css-code-snippets/8474/35?u=klaas) on the forum. I have not copied the code here because it is important to 1<sup>st</sup> see what it does. Also, check out his video that he links to.
 
 ## Sticky notes
+/* NOTE: syntax to be used to have a sticky rendered
+/* <p class="stickies">Some text</p> */
+
+
 /* From Gabroel - https://discord.com/channels/686053708261228577/702656734631821413/789334135788273724 and scroll down that page. Code was not quite correct, so here is the right code. */
 ```css
 .stickies {
@@ -128,8 +132,31 @@ div.popover.hover-popover, .menu, .suggestion-container {
   border: 1px;
   box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
 }
+```
 
-/* Images with a piece of scotch tape effect - thanks to Lithou*/
+/* Another sticky possibility from j314 - https://discord.com/channels/686053708261228577/702656734631821413/801873554785566760
+/* NOTE: syntax to be used to have a sticky rendered
+/* <p class="sticky">Some text</p> */
+
+```css
+.sticky {
+  background-color:var(--yellow);
+  padding:10px;
+  width:300px;
+  height:200px;
+  color:black;
+  margin-left:150px;
+  font-family: chalkboard;
+  box-shadow: 10px 10px 7px rgb(0,0,0,0.5);
+  transform:rotate(3deg);
+  transition: transform .15s linear;
+}
+.sticky:hover {
+  transform:scale(1.1);
+}
+```
+
+## Images with a piece of scotch tape effect - thanks to Lithou*/
 /* placement of images */
 /* After putting the code below, you can get the tape effect doing ![[imagename.png#tape]] */
 /* refer to Lithou's sandbox https://github.com/lithou/sandbox */

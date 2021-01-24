@@ -36,7 +36,7 @@ span.flair.mod-pop {
   background-color: var(--base2);
 }
 
-/* "Installed plug-ins" refresh button */
+/* In tab "Appearance" set color of "refresh" and "Open themes folder" icons */
 .setting-editor-extra-setting-button.clickable-icon {
   color: var(--base2);
 }
@@ -48,5 +48,18 @@ a {
 
 a:hover {
   color: var(--base3);
+}
+
+/* dropdown box color, excl. arrow */
+.dropdown {
+  background-color: var(--text-accent);
+  color: white;
+  border: none;
+}
+
+.setting-item-control .dropdown:hover {
+  background-color: rgb(202, 89, 86);
+  color: white;
+  border: none;
 }
 ```

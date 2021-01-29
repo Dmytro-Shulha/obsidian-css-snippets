@@ -161,3 +161,25 @@ Reduce gap between adjacent block embeds:
 }
 ```
 
+## Videos
+```css
+/* Embedded video */
+/* NOTE: ADD THE CODE BELOW TO YOUR NOTE OR A TEMPLATE
+/* REPLACE THE SECTION "https://......PASTE_ID" WITH THE VIDEO ID OF THE TO-BE-EMBEDDED VIDEO
+<div class="videoWrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PASTE_ID"
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin-bottom: 3%;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+```

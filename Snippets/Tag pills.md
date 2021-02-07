@@ -24,6 +24,20 @@
   text-decoration: none !important;
 }
 
+/* Tag pills in Preview mode
+.tag:not(.token) {
+  border: none;
+  color: white !important;
+  font-size: 12px;
+  padding: 1px 8px 3px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 15px; /* change to 4px for rectangular pills */
+  background-color: var(--text-accent) !important;
+}
+
 /* Tag pills in tag pane */
 .tag-pane-tag-count {
   background-color: var(--text-accent);

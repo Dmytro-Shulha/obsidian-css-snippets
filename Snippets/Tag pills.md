@@ -1,11 +1,12 @@
 # Tag pills
 ```css
 /* Tag pills in edit mode - thanks to Whyl */
+/* to make rectangular tag pills w/ rounded corners change radii to 4 px */
 .CodeMirror-line span.cm-hashtag-begin {
   background-color: var(--text-accent);
   color: white;
-  border-top-left-radius:15px;
-  border-bottom-left-radius:15px;
+  border-top-left-radius:15px; /* change to 4px for rectangular pills */
+  border-bottom-left-radius:15px; /* change to 4px for rectangular pills */
   padding-left:8px;
   border-right:none;
   display: inline-block;
@@ -15,8 +16,8 @@
 .CodeMirror-line span.cm-hashtag-end {
   background-color: var(--text-accent);
   color: white;
-  border-top-right-radius:15px;
-  border-bottom-right-radius:15px;
+  border-top-right-radius:15px; /* change to 4px for rectangular pills */
+  border-bottom-right-radius:15px; /* change to 4px for rectangular pills */
   padding-right:8px;
   border-left:none;
   display: inline-block;
@@ -35,7 +36,7 @@
   display: inline-block;
   margin: 0px 0px;
   cursor: pointer;
-  border-radius: 14px;
+  border-radius: 14px; /* change to 4px for rectangular pills */
 }
 
 .tag-pane-tag-text {
@@ -49,7 +50,7 @@
   display: inline-block;
   margin: 0px 0px;
   cursor: pointer;
-  border-radius: 14px;
+  border-radius: 14px; /* change to 4px for rectangular pills */
 }
 
 /* Change color of tag count pill when hovering */

@@ -283,3 +283,17 @@ and of var(--text-faint) for not active */
   background-color: var(--background1);
 }
 ```
+
+## Emojis in folder name
+/* 2 examples */
+```css
+.nav-folder-title[data-path="+inbox"] .nav-folder-title-content::before {
+  content: "📥 ";
+  font-size:1.3em;
+}
+
+.nav-folder-title[data-path="+Obsidian"] .nav-folder-title-content::before {
+  content: "⚙️ ";
+  font-size:1.3em;
+}
+```

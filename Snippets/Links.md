@@ -1,7 +1,7 @@
 # Links
 ## Change color
 ```css
-/* internal links */
+/* Internal links */
 /* change colour in Preview */
 a.internal-link {
   color: var(--base2);
@@ -12,11 +12,17 @@ a.internal-link {
   color: var(--base2);
 }
   
-/* external links - URLs */
+/* External links - URLs */
 /* change colour in Preview */
 a.external-link {
   color: var(--base3);
   font-weight: 500;
+}
+
+/* change colour in Edit */
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-url { /* PB added */
+  color: #c6ceda; /* ITS theme */
 }
 
 /* change color intensity of unresolved links */

@@ -45,3 +45,16 @@ div.test em {
 cssclass: test
 `---`
 ```
+```
+
+```css
+/* Set color of bold text */
+.cm-s-obsidian .cm-strong, strong {
+  color: var(--bright-red);
+}
+  
+/* Set color of italic text */
+.cm-em, em {
+  color: goldenrod;
+}
+```

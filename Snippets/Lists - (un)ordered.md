@@ -26,17 +26,17 @@ ul ul::before { left: -11px; top: 0; bottom: 0; /* change "left:" value for alig
 
 /* Edit mode unordered list dash rendered as dot for WYSIWYG */
 /* I prefer "Turn -lists into bullets as you type as per Typora */
-div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-list-ul {
-    color: transparent;
-    max-width: 10px;
+/* Unordered lists: turn into bullets as you type, as per Typora */
+```css
+span.cm-formatting-list-ul {
+  visibility: hidden !important;
 }
   
-div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-list-ul:after {
-    content: "•";
-    position: absolute;
-    top: 6px;
-    left: 4px;
-    color: var(--text-normal);
+span.cm-formatting-list-ul:after {
+  content: '• '; /* ITS theme; for Blue Topaz  */
+  margin-left: -12px;
+  color: var(--accent); /* ITS theme; for Blue Topaz --text-normal */
+  visibility: visible !important;
 }
 ```
 

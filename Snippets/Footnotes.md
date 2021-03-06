@@ -95,3 +95,13 @@ section.footnotes p {
 font-size: small;
 }
 ```
+
+```css
+/* Stop footnotes affecting line height */
+sup { 
+    vertical-align: top; 
+    position: relative; 
+    top: -0.3em; 
+    font-size: 0.75em; 
+}
+```

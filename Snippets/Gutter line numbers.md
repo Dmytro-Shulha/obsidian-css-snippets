@@ -25,4 +25,29 @@
     text-align: right;
     white-space: nowrap;
 }
+
+/* align vertically with text */
+.CodeMirror-gutter-wrapper { height:100%; }
+.CodeMirror-gutter-elt { top:0; }
+.cm-s-obsidian .CodeMirror-linenumber{ 
+  height: 100%;
+  line-height: 0;
+}
+.cm-s-obsidian .CodeMirror-linenumber::before {
+  content: "";
+  height: 50%;
+  display: block;
+}
+
+/* align vertically with header */
+cm-s-obsidian .HyperMD-header {
+  padding-top:0.125em;
+  padding-bottom:0.125em;
+} 
+
+/* align vertically with text in lists */
+.cm-s-obsidian .HyperMD-list-line {
+  padding-top:0.15em;
+  padding-bottom:0.15em;
+}
 ```

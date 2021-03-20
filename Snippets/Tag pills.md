@@ -2,29 +2,31 @@
 ```css
 /* Tag pills in edit mode - thanks to Whyl */
 /* to make rectangular tag pills w/ rounded corners change radii to 4 px */
-.CodeMirror-line span.cm-hashtag-begin {
+
+
+.CodeMirror-line span.cm-hashtag{
   background-color: var(--text-accent);
   color: white;
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+
+.CodeMirror-line span.cm-hashtag-begin {
   border-top-left-radius:15px; /* change to 4px for rectangular pills */
   border-bottom-left-radius:15px; /* change to 4px for rectangular pills */
   padding-left:8px;
   border-right:none;
-  display: inline-block;
-  text-decoration: none !important;
 }
 
 .CodeMirror-line span.cm-hashtag-end {
-  background-color: var(--text-accent);
-  color: white;
   border-top-right-radius:15px; /* change to 4px for rectangular pills */
   border-bottom-right-radius:15px; /* change to 4px for rectangular pills */
   padding-right:8px;
   border-left:none;
-  display: inline-block;
-  text-decoration: none !important;
 }
 
-/* Tag pills in Preview mode
+/* Tag pills in Preview mode */
 .tag:not(.token) {
   border: none;
   color: white !important;

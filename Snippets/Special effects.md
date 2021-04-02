@@ -161,6 +161,7 @@ div.popover.hover-popover, .menu, .suggestion-container {
 /* After putting the code below, you can get the tape effect doing ![[imagename.png#tape]] */
 /* refer to Lithou's sandbox https://github.com/lithou/sandbox */
 
+```css
 div{
     --coremarg: 1%; 
     --extramarg: 1%; /* This margin is used for any added margin between items */
@@ -168,7 +169,9 @@ div{
 }
 
 /* Core Flags */
-    /*side */
+/* side */
+
+```css
         div[alt*="+side"]{
             position: relative;
             width: var(--defaultwidth);
@@ -176,9 +179,12 @@ div{
             margin: 0px;
             margin-left: var(--coremarg);
         }
-        
-    /*tape */
-        div[alt*="+tape"] {
+```
+
+/* tape */
+
+```css
+div[alt*="+tape"] {
             position: relative;
             float: right;
             width: var(--defaultwidth);
@@ -189,8 +195,10 @@ div{
             -ms-transform: rotate(0deg);
             transform: rotate(2deg);
         }
+```
 
-        div[alt*="+tape"]::before {
+```css
+div[alt*="+tape"]::before {
             content: "";
             display: block;
             position: relative;
@@ -227,8 +235,12 @@ div{
             height: 5px;
             top: 2px;
         }
-    /* Push Pin */
-        div[alt*="+pin"] {
+```
+
+/* Push Pin */
+
+```css
+div[alt*="+pin"] {
             position: relative;
             float: right;
             width: var(--defaultwidth);
@@ -269,8 +281,11 @@ div{
         div[alt*="+landscape"]>img{
             vertical-align: middle;
             clip-path: ellipse(45% 35% at 50% 50%);}
+```
 
-    /* Banner and HR */
+/* Banner and HR */
+
+```css
         div[alt*="+banner"]{
             height: 100px;
             overflow: hidden;
@@ -291,10 +306,12 @@ div{
         div[alt*="+hr"]>img{
             margin-top: -200px;
             }
-        
+```        
 
-    /*Custom Core Flags */
-    div[alt*="+custom1"]{
+/* Custom Core Flags */
+
+```css
+div[alt*="+custom1"]{
         position: relative;
         width: var(--defaultwidth);
         float: right;
@@ -308,10 +325,13 @@ div{
         margin-top: 0px;
         margin-bottom: 0px;
     }
+```
 
 /* Modifier Flags */
     /* Orientation and position */
-        div[alt*="-left"]{
+
+```css
+div[alt*="-left"]{
             float: left;
             margin: 0px;
             margin-right: var(--extramarg);}
@@ -321,16 +341,22 @@ div{
             margin-left: var(--extramarg);}
         div[alt*="-fix"]{position: fixed;}
         div[alt*="-abs"]{position: absolute;}
+```
 
-    /* Size */
-        div[alt*="-thumb"]{width: 11.50%;}
+/* Size */
+
+```css
+div[alt*="-thumb"]{width: 11.50%;}
         div[alt*="-sm"]{width: 24%;}
         div[alt*="-med"]{width: 32.3333%;}
         div[alt*="-lg"]{width: 49%;}
         div[alt*="-huge"]{width: 67%;}
         div[alt*="-cwidth"]{float: none;margin-left: -10%;width: 120%;}
+```
 
 /* Borders */
+
+```css
 div[alt*="-border1"]>img{border: solid black 3px;}
 div[alt*="-border2"]>img{border: solid white 3px;}
 div[alt*="-bradius1"]>img{border-radius: 5px;}
@@ -341,15 +367,19 @@ div[alt*="-bradiustr"]>img{border-top-right-radius: 20px;}
 div[alt*="-bradiusbl"]>img{border-bottom-left-radius: 20px;}
 div[alt*="-bthick"]>img{border-width: 5px;}
 div[alt*="-bthin"]>img{border-width: 1px;}
+```
 
 /* Div Borders */
+
+```css
 div[alt*="-divborder1"]{border: solid #336699 2px;}
 div[alt*="-divborder2"]{border: solid black 2px;}
 div[alt*="-divbradius1"]{border-radius: 5px;}
 div[alt*="-divbradius2"]{border-radius: 20px;}
 div[alt*="-cdivbradius1"]{border-radius: 50px;}
+```
 
-
+```css
 div[alt*="-shadow1"]>img{
     box-shadow: darkgrey -2px 2px 2px;
 

@@ -1,82 +1,104 @@
 # Outliner pane
 ```css
 /* connecting lines outliner */
-.outline .collapsible-item-children {
-    margin-left: 20px;
-    border-left: 1px solid var(--text-muted);
-    border-radius: 4px;
-    transition:all 0.5s ease-in-out;
+.outline {
+  font-size: 0.8rem;
+  font-weight: 200;
 }
 
-.outline .collapsible-item-children:hover {
-    border-left-color: var(--text-normal);
+.outline .tree-item {
+  line-height: 1.3;
 }
 
+.outline .tree-item-self {
+  padding-top: 0.2rem;
+  padding-bottom: 0.1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.3rem;
+}  
+
+.outline .tree-item-collapse {
+  left: 0.1rem;
+}  
+
+.outline .tree-item-inner{
+  position:relative;
+  padding-top: 0.2rem;
+  /* padding-left: 1rem; */
+  padding-left: 1.7em;
+  text-indent: -0.8em;
+  margin-left: 0.2rem;
+  /* font-size: 0.9em; */
+}  
+
+.outline .tree-item-children {
+  margin-left: 0.7rem;
+  padding-left: 0.5rem;
+  margin-top: -0.3rem;
+  padding-top: 0.3rem;
+  border-left: 1px solid var(--sidebar-marks, var(--background-modifier-border));
+  border-radius: 4px;
+  transition:all 0.5s ease-in-out;
+}
+
+.outline .tree-item-children:hover {
+  border-left-color: var(--sidebar-marks-hover, var(--background-secondary));
+}
+
+.outline .collapse-icon + .tree-item-inner {
+  font-weight: 400;
+  padding-left: 0.2rem;
+  /* margin-left: 0rem; */
+  /* font-size: 1em; */
+}
+
+.outline .collapse-icon {
+  margin-top: 0.2rem;
+  margin-left: -0.4rem;
+  margin-right: -0.4rem;
+  width: 2rem;
+}
+```
+
+/* indent wrapped titles outliner*/
+/* included above */
+
+```css
 /* change font color outline */
 div.collapsible-item-inner {
   color: var(--base3);
 }
-
-/* indent wrapped titles outliner*/
-  .outline .collapsible-item-inner {
-    margin-left: 10px;
-    text-indent: -10px;
-}
-
-/* List styling (numbering) for outline pane */
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline {
-  counter-reset: h1;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.pane-clickable-item {
-  counter-reset: h2;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.pane-clickable-item {
-  counter-reset: h3;
-}
-
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item {
-  counter-reset: h4;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item {
-  counter-reset: h5;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item {
-  counter-reset: h6;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.pane-clickable-item:before {
-  counter-increment: h1;
-  content: counter(h1) ". ";
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-  counter-increment: h2;
-  content: counter(h1) "." counter(h2) ". ";
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-  counter-increment: h3;
-  content: counter(h1) "." counter(h2) "." counter(h3) ". ";
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-  counter-increment: h4;
-  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-  counter-increment: h5;
-  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-  counter-increment: h6;
-  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
-}
 ```
+
+```css
+/* Heading counter for outline pane */
+.outline {
+  counter-reset: rootLayout;
+}
+.outline .tree-item .tree-item-self .tree-item-inner::before {
+  content: counters(rootLayout, ".") ". ";
+  counter-increment: rootLayout;
+}
+.tree-item-children {
+  counter-reset: internalLayout;
+}
+.tree-item-children .tree-item .tree-item-self .tree-item-inner::before {
+  content: counters(rootLayout, ".") "." counters(internalLayout, ".") ". ";
+  counter-increment: internalLayout;
+}
+
+/* nested list counting (ex: 1.1, 1.2) */
+/* https://github.com/hipstersmoothie/obsidian-plugin-toc#detailed-nested-ordered-lists */
+ol {
+  counter-reset: item;
+}
+
+ol li {
+  display: block;
+}
+
+ol li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+  padding-right: 5px;
+}

@@ -109,6 +109,18 @@ svg.link {
 }
 ```
 
+```css
+/* Tranclusion pointing to header but leave out header, only show text below */
+.internal-embed .markdown-embed h1,
+.internal-embed .markdown-embed h2,
+.internal-embed .markdown-embed h3,
+.internal-embed .markdown-embed h4,
+.internal-embed .markdown-embed h5,
+.internal-embed .markdown-embed h6 {
+    display: none;
+}
+```
+
 ## Block references
 ```css
 /* Indent embedded block reference */

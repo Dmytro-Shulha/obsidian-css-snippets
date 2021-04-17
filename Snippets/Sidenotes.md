@@ -1,10 +1,10 @@
 ```css
+/* Sidenote in line with the main text */
 aside {
   float: right;
   border: 1px solid lightgrey;
   padding: 8px;
   padding-top: 0px;
-  margin-right: -20em;
   position: relative;
   left: 10px;
   top: 5px;
@@ -14,4 +14,9 @@ aside {
   font-size: 14px;
   border-radius: 4px;
 }
+```
+
+```css
+/* to put the sidenote in the right gutter, add this rule to the code above */
+margin-right: -20em;
 ```

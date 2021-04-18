@@ -27,3 +27,17 @@ body.theme-light.plugin-sliding-panes .view-header {
     background-color: #f2f8fd;
 }
 ```
+
+```css
+/* Wrap long title in the title bar of a note
+courtsey of SIRvb https://discord.com/channels/686053708261228577/702656734631821413/829852938763370546 */
+.view-header-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+    line-height: 25px;
+}
+.view-header {
+    height: auto;
+}
+```

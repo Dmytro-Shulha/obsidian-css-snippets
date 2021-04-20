@@ -60,3 +60,43 @@ table tr td:last-child {
   margin-bottom: 0;
 }
 ```
+
+```css
+/* Latex table */
+/* Source: DeaconLight - https://forum.obsidian.md/t/obsidian-tables-that-look-like-latex-tables-with-css/16683 */
+/* ------------------------------------*/
+.academia table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: auto;
+	max-width: 100%;
+	border-top: 2.27px solid black;
+	border-bottom: 2.27px solid black;
+	overflow-x: auto; 
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.academia th,
+.academia td {
+	border: 0 none !important;
+	text-align: left;
+	padding: 0.5rem;
+	line-height: 1.1;
+}
+.academia tr:hover,
+.academia td:hover {
+	background-color: #cccccc;
+}
+.academia table > tbody > tr:first-child > td,
+.academia table > tbody > tr:first-child > th {
+	border-top: 1.36px solid black !important;
+}
+.academia table > tbody > tr:last-child > td,
+.academia table > tbody > tr:last-child > th {
+	border-bottom: 1.36px solid black !important;
+}
+.academia thead th {
+    background-color: white !important;
+    font-weight: 700;
+}
+.academia tr:nth-child(even) { background-color: #dddddd ; }
+```

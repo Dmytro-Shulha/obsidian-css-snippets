@@ -71,15 +71,4 @@ a:hover {
 }
 ```
 
-```css
-/* Mark active line background in Edit mode */
-.CodeMirror-activeline-background{
-    background-color: gainsboro;
-}
 
-/* Mark active line number in Edit mode */
-.cm-s-obsidian .CodeMirror-activeline-gutter > .CodeMirror-linenumber {
-  font-weight: 600;
-  color: (your color choice here);
-}
-```

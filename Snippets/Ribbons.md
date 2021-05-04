@@ -1,6 +1,11 @@
 # Ribbons
 ```css
-/* Ribbons */ 
+/* collapse ribbon */
+.side-dock-ribbon { flex: 0; }
+.workspace-ribbon { width: 0; }
+```
+
+```css 
 /* collapse buttons: change color */
 .workspace-ribbon-collapse-btn {
   color: var(--base2);

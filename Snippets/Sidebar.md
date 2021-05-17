@@ -1,7 +1,7 @@
 # Sidebar
 ```css
 /* BOTH SIDEBARS */
-/* Collapsible sidebars */
+/* Collapsible ribbon */
 .side-dock-ribbon { flex: 0; }
 .workspace-ribbon { width: 0; }
 ```

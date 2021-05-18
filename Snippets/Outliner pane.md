@@ -102,3 +102,7 @@ ol li:before {
   counter-increment: item;
   padding-right: 5px;
 }
+```
+
+TO AUTOMATICALLY CONVERT H1 HEADINGS TO CAPITAL LETTERS,
+GO TO THE `HEADERS.md` FILE AND SCROLL DOWN FAIRLY FAR.

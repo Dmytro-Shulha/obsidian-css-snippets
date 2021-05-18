@@ -334,3 +334,22 @@ font-size: 0.6em;
   font-weight: bold;
 }
 ```
+
+```css
+/* Automatically convert H1 headings to capitals in the Outline pane */
+.outline .tree-item-inner {
+    text-transform: uppercase;
+}
+
+.outline .tree-item-children .tree-item-inner {
+    text-transform: none;
+}
+```
+
+If you need to have H1 headings capitalized in the note text, use:
+```css
+/* Automatically convert H1 headings to capitals in text */
+.cm-header-1, .markdown-preview-view h1 {
+    text-transform: uppercase;
+}
+```

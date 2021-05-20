@@ -297,3 +297,21 @@ and of var(--text-faint) for not active */
   font-size:1.3em;
 }
 ```
+
+## Hide a folder
+Note: If you don’t know the data-path to put in the code below, you can open the developer with 
+CTRL/CMD+SHIFT+I and check the path. Beware, the data path only updates after a restart for newly file/folder.
+```css
+div[data-path='folder'], 
+div[data-path='folder'] + div.nav-folder-children 
+{
+    display: none;
+}
+```
+
+# Hide a file
+```css
+.nav-file-title[data-path="file_path.md"] {
+	display: none;
+}
+```

@@ -21,14 +21,18 @@ div[src*="#"].internal-embed .markdown-embed-content>.markdown-preview-view>div.
 
   display:block;
 }
+```
 
+```css
 /* change the color of note title in the embed */
 .markdown-embed-title {
 	color: red; /*change color*/
 	display: none; /*remove*/
-  }
+ }
+ ``` 
 
-/*==============TRANSCLUSION TWEAKS=============*/
+## TRANSCLUSION TWEAKS
+```css
 .markdown-embed-title {
 	font-family: sans-serif;
 	font-size: 10px;
@@ -39,6 +43,7 @@ div[src*="#"].internal-embed .markdown-embed-content>.markdown-preview-view>div.
 	font-weight: 100;
 	margin: -4px 0px;
 }
+
 .markdown-preview-view .markdown-embed {
 	background-color: var(--background-primary);
 	border-radius: 0px;
@@ -101,16 +106,55 @@ svg.link {
 	overflow: hidden;
 	white-space: nowrap;
 }
+```
 
-/* Eliminate scrollbars in transclusions (from death-au) */
+## Transclusions/clean-embeds
+```css
+    Removes title, link, padding, margins from embeds,
+    so they really look like the same note.
+
+   PLEASE NOTE: To be used with `cssclass: clean-embeds` in YAML frontmatter.
+
+    2021-05-25 Matthias C. Hormann (Moonbase59)
+*/
+
+/* remove title and link */
+.markdown-preview-view.clean-embeds .markdown-embed-title,
+.markdown-preview-view.clean-embeds .markdown-embed-link {
+  display: none;
+}
+
+/* remove border and scroll */
+.markdown-preview-view.clean-embeds .markdown-embed,
+.markdown-preview-view.clean-embeds .file-embed {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.markdown-preview-view.clean-embeds .markdown-embed-content,
+.markdown-preview-view.clean-embeds .markdown-embed-content > .markdown-preview-view { 
+  max-height: unset;
+  padding: 0;
+  margin: 0;
+}
+
+/* remove <br> between internal embeds */
+.clean-embeds .markdown-preview-section div > p br {
+  display: none;
+}
+```
+
+## Eliminate scrollbars in transclusions (from death-au)
+```css
 .markdown-preview-view .markdown-embed-content,
 .markdown-preview-view .markdown-embed-content>.markdown-preview-view {
   max-height: unset;
 }
 ```
 
+## Tranclusion pointing to header but leave out header, only show text below
 ```css
-/* Tranclusion pointing to header but leave out header, only show text below */
 .internal-embed .markdown-embed h1,
 .internal-embed .markdown-embed h2,
 .internal-embed .markdown-embed h3,
@@ -151,8 +195,7 @@ you can use spaces. For example:
 }
 ```
 
-To get just 1 embed coloured, in this example the "Lorum ipsum test" embed is yellow:
-
+## To get just 1 embed coloured, in this example the "Lorum ipsum test" embed is yellow:
 ```css
 .internal-embed:not([src*="#"]):not([src*="^"]) {
     background-color: blue;
@@ -163,8 +206,7 @@ To get just 1 embed coloured, in this example the "Lorum ipsum test" embed is ye
 }
 ```
 
-Reduce gap between adjacent block embeds:
-
+## Reduce gap between adjacent block embeds:
 ```css
 /* Reduce gap between adjacent block embed */
 .markdown-preview-view .markdown-embed {

@@ -116,6 +116,7 @@ svg.link {
    PLEASE NOTE: To be used with `cssclass: clean-embeds` in YAML frontmatter.
 
     2021-05-25 Matthias C. Hormann (Moonbase59)
+    TODO: Find out how to correct PDF export. L/R margins & vspace too large on embeds.
 */
 
 /* remove title and link */
@@ -140,9 +141,27 @@ svg.link {
 }
 
 /* remove <br> between internal embeds */
-.clean-embeds .markdown-preview-section div > p br {
+.clean-embeds .markdown-preview-section div > p br,
+.clean-embeds .markdown-preview-section div > br {
   display: none;
 }
+
+/* remove vertical space added by markdown-preview-sizer */
+.clean-embeds div.markdown-preview-sizer.markdown-preview-section {
+  min-height: unset !important;
+  padding-bottom: 0 !important;
+}
+
+/* special considerations for printing (PDF export) */
+@media print {
+
+  /* remove frontmatter if "Show frontmatter" was enabled */
+  .markdown-preview-view .frontmatter {
+    display: none;
+  }
+}
+
+
 ```
 
 ## Eliminate scrollbars in transclusions (from death-au)

@@ -160,8 +160,31 @@ svg.link {
     display: none;
   }
 }
+```
 
+## Naked embeds
+courtesy death_au
+```css
+.markdown-embed-title { display:none; }
+.markdown-preview-view .markdown-embed { border:none; padding:0; margin: 0; }
+.markdown-preview-view .markdown-embed-content { max-height: unset;}
+.markdown-preview-view .markdown-embed-content>:first-child { margin-top: 0; }
+.markdown-preview-view .markdown-embed-content>:last-child { margin-bottom: 0; }
 
+/* Optional: hide link icon */  
+.markdown-preview-view .markdown-embed-link {
+  opacity: 0;
+}
+
+/* show link icon on hover */
+.markdown-preview-view .markdown-embed-link:hover {
+  opacity: 1;
+}
+
+/* Optional: show dotted line on hover */
+.markdown-preview-view .markdown-embed-content:hover {
+    border-left: 2px dotted var(--text-normal);
+}
 ```
 
 ## Eliminate scrollbars in transclusions (from death-au)

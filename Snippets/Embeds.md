@@ -109,6 +109,7 @@ svg.link {
 ```
 
 ## Transclusions/clean-embeds
+### Clean embeds on a per note basis
 ```css
     Removes title, link, padding, margins from embeds,
     so they really look like the same note.
@@ -159,6 +160,94 @@ svg.link {
   .markdown-preview-view .frontmatter {
     display: none;
   }
+}
+```
+
+### Clean embeds on a vault-wide basis, alternative for Naked embeds below
+
+/* NOTE: THIS VERSION OF CLEAN EMBEDS DOES **NOT** REQUIRE
+A `CSSCLASS` TO BE SET, THIS VERSION IS VAULT-WIDE, LIKE
+DEATH_AU'S NAKED EMBED CODE */
+
+/*
+    clean-embeds-all.css snippet
+
+    Removes title, link, padding, margins from embeds,
+    so they really look like the same note.
+
+    This will not require a `cssclass` to be set but work for _all_ notes.
+    Derived from the `clean-embeds.css` snippet.
+
+    2021-05-27 Matthias C. Hormann (Moonbase59)
+
+    TODO: Find out how to correct PDF export. L/R margins & vspace too large on embeds.
+*/
+
+```css
+/* remove title and link */
+.markdown-preview-view .markdown-embed-title,
+.markdown-preview-view .markdown-embed-link { /* comment out this line if Option 1A & 1B are used */
+    display: none;
+}
+    
+/* remove border and scroll */
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+    
+.markdown-preview-view .markdown-embed-content,
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view { 
+    max-height: unset;
+    padding: 0;
+    margin: 0;
+}
+    
+/* remove <br> between internal embeds */
+.markdown-preview-section div > p br,
+.markdown-preview-section div > br {
+    display: none;
+}
+    
+    
+/* remove vertical space added by markdown-preview-sizer */
+div.markdown-preview-sizer.markdown-preview-section {
+    min-height: unset !important;
+    padding-bottom: 0 !important;
+}
+    
+/* special considerations for printing (PDF export) */
+@media print {
+    
+/* remove frontmatter box if "Show frontmatter" was enabled */
+    pre.frontmatter {
+    display: none;
+    }
+}
+
+Optional 1A & 1B go together
+/* Optional 1A: Hide link icon */  
+.markdown-preview-view .markdown-embed-link {
+    opacity: 0;
+}
+    
+/* Optional 1B: show link icon on hover */
+.markdown-preview-view .markdown-embed-link:hover {
+    opacity: 1;
+}
+
+Optional 2A & 2B go together
+/* Optional 2A: Hide dotted vertical line (no. 764 in theme's CSS)
+demarcating a transclusion */
+.markdown-preview-view .markdown-embed-content {
+    border-left: none;
+}
+
+/* Optional 2B: show dotted line on hover */
+.markdown-preview-view .markdown-embed-content:hover {
+    border-left: 2px dotted var(--text-normal);
 }
 ```
 

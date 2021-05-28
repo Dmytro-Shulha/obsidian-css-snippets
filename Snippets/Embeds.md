@@ -227,27 +227,26 @@ div.markdown-preview-sizer.markdown-preview-section {
     }
 }
 
-Optional 1A & 1B go together
-/* Optional 1A: Hide link icon */  
-.markdown-preview-view .markdown-embed-link {
-    opacity: 0;
-}
-    
-/* Optional 1B: show link icon on hover */
-.markdown-preview-view .markdown-embed-link:hover {
-    opacity: 1;
+Optional
+/* LINK ICON */
+.markdown-embed-link,
+.file-embed-link {
+  top:0px;
+  right:0;
+  text-align:right;
 }
 
-Optional 2A & 2B go together
-/* Optional 2A: Hide dotted vertical line (no. 764 in theme's CSS)
-demarcating a transclusion */
-.markdown-preview-view .markdown-embed-content {
-    border-left: none;
+/* hide */
+.file-embed-link svg,
+.markdown-embed-link svg {
+  width:16px;
+  opacity:0;
 }
 
-/* Optional 2B: show dotted line on hover */
-.markdown-preview-view .markdown-embed-content:hover {
-    border-left: 2px dotted var(--text-normal);
+/* show on hover */
+.markdown-embed:hover .file-embed-link svg,
+.markdown-embed:hover .markdown-embed-link svg {
+  opacity:1;
 }
 ```
 
@@ -260,19 +259,32 @@ courtesy death_au
 .markdown-preview-view .markdown-embed-content>:first-child { margin-top: 0; }
 .markdown-preview-view .markdown-embed-content>:last-child { margin-bottom: 0; }
 
-/* Optional: hide link icon */  
-.markdown-preview-view .markdown-embed-link {
-  opacity: 0;
+/* remove vertical space added by markdown-preview-sizer */
+div.markdown-preview-sizer.markdown-preview-section {
+  min-height: unset !important;
+  padding-bottom: 0 !important;
 }
 
-/* show link icon on hover */
-.markdown-preview-view .markdown-embed-link:hover {
-  opacity: 1;
+Optional
+/* LINK ICON */
+.markdown-embed-link,
+.file-embed-link {
+  top:0px;
+  right:0;
+  text-align:right;
 }
 
-/* Optional: show dotted line on hover */
-.markdown-preview-view .markdown-embed-content:hover {
-    border-left: 2px dotted var(--text-normal);
+/* hide */
+.file-embed-link svg,
+.markdown-embed-link svg {
+  width:16px;
+  opacity:0;
+}
+
+/* show on hover */
+.markdown-embed:hover .file-embed-link svg,
+.markdown-embed:hover .markdown-embed-link svg {
+  opacity:1;
 }
 ```
 

@@ -154,3 +154,15 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end:before {
   color: rgb(123, 108, 214);
 }
 ```
+
+```css
+/* Show line numbers only on hover */
+.theme-dark
+.cm-s-obsidian .CodeMirror-linenumber {
+  opacity : 0;
+}
+
+.cm-s-obsidian .CodeMirror-linenumber:hover {
+  opacity: 1;
+}
+```

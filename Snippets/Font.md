@@ -21,6 +21,17 @@ div.markdown-preview-view {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Preview font: make thinner */
+/* this does NOT affect the sidepanels like File Explorer, Search */
+.markdown-preview-view {
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* this DOES affect the sidepanels like File Explorer, Search too */
+html {
+  -webkit-font-smoothing: antialiased !important;
+}
+
 /* Coloring fonts - from Lithou on forum */
 /* of italics in Edit mode all notes in a vault */
 .cm-em {

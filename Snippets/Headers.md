@@ -42,6 +42,15 @@ OR put it in an html element with a class that changes the color
   color:rgb(203, 77, 73);
 }
 
+/* Gradient coloured headers in Edit and Preview mode */
+.cm-s-obsidian .cm-header-1,
+ .markdown-preview-view h1 {
+  background: linear-gradient(to right, gold, coral); /* choose any 2 colors you like */
+  -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+}
+
 /* Coloured headings for editor and preview in Dracula */
 .cm-header-1, .markdown-preview-view h1
 {

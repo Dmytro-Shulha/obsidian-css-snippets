@@ -57,6 +57,55 @@
 }
 ```
 
+```css
+/* make the plug-ins window bigger and more compact - courtesy: pseudometa */
+.modal.mod-community-plugin {
+    height: 93%;
+    max-width: unset;
+    width: 96%;
+}
+.community-plugin-item {
+    padding-top: 0.1em;
+    padding-left: 0.9em;
+    padding-right: 0.3em;
+    padding-bottom: 0.1em;
+    line-height: 1.2em;
+    margin-top: 0.1em;
+}
+.community-plugin-search-summary.u-muted{
+    font-weight: 600;
+    padding-left: 0.9em;
+}
+.community-plugin-author,
+.community-plugin-desc,
+.community-plugin-version {
+    font-size: 0.85em !important;
+    line-height: 1.3em;
+    color: var(--text-muted);
+}
+.community-plugin-author,
+.community-plugin-version{
+    font-style: italic;
+}
+.community-plugin-name {
+    line-height: 1.2em;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.flair.mod-pop {
+    top: 4px;
+}
+.install{
+    display:none;
+}
+.community-plugin-downloads::before,
+.community-plugin-downloads-text {
+    content: "↓";
+    font-size: 0.9em;
+    color: var(--text-muted);
+}
+```
+
 # Settings buttons colour
 ```css
 /* Obsidian settings, change color of: */

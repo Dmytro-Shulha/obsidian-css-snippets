@@ -1,3 +1,62 @@
+# Settings window/modal (CMD/CTRL+,)
+```css
+/* make the window bigger and more compact - courtesy: pseudometa */
+.modal.mod-settings {
+  height: 92.5%;
+  width: 90%;
+}
+.modal-close-button {
+  top: 0px;
+  right:3px;
+}
+.vertical-tab-content-container {
+  padding-bottom: 0 !important;
+  padding-top: 1em !important;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  height: 40em !important;
+}
+.vertical-tab-header {
+  height: 40em !important;
+}
+.setting-item {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.setting-item-description{
+  font-size: 0.85em;
+  line-height: 1.5em;
+}
+.setting-item-name{
+  font-size: 0.95em;
+  line-height: 1.5em;
+}
+.mod-cta, .dropdown{
+  font-size: 0.85em !important;
+  line-height: 1.5em;
+}
+.horizontal-tab-content, .vertical-tab-content {
+  background:var(--background-primary);
+  padding-bottom:100px;
+}
+.modal.mod-settings .vertical-tab-header {
+  background:var(--background-secondary);
+  padding-top: 0;
+}
+.vertical-tab-header-group-title {
+  color:var(--text-normal);
+  font-size:0.8em;
+  letter-spacing:0.1em;
+  font-weight:600;
+  padding-bottom:0;
+}
+.vertical-tab-nav-item {
+  padding:3px 3px 3px 0.9em;
+  color:var(--text-muted);
+  background:var(--background-secondary);
+}
+```
+
 # Settings buttons colour
 ```css
 /* Obsidian settings, change color of: */

@@ -1,6 +1,6 @@
-# Masonry
-
+# Panes
 ```css
+/* Masonry */
 div.workspace-split.mod-root > div.workspace-split.mod-vertical {
     overflow: auto;
 }

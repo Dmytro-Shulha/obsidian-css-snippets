@@ -1,4 +1,4 @@
-/* Masonry */
+# Masonry
 
 ```css
 div.workspace-split.mod-root > div.workspace-split.mod-vertical {

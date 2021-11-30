@@ -1,4 +1,4 @@
-# VimStaticCaret
+# Vim Static Caret
 
 Changes the Vim caret from a blinking one to a static one in the editor to reflect a more realistic Vim experience.
 

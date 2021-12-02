@@ -363,4 +363,31 @@ If you need to have H1 headings capitalized in the note text, use:
 }
 ```
 
-# In Live Preview, show hashes
+In Live Preview, header hashes are hidden if the line is not active.
+Some people prefer to keep them visible to know what level header they are dealing with.
+The code below is courtesy of @NothingIsLost on the Discord forum.
+```css
+.cm-line > span.cm-header-1:not(.cm-formatting):before { content: "# "; }
+.cm-line.cm-active > span.cm-header-1 > span:not(.cm-selection):before { content: "# "; }
+.cm-line > span.cm-header-1 ~ span.cm-header-1:not(.cm-formatting):before { content: ""; }
+
+.cm-line > span.cm-header-2:not(.cm-formatting):before { content: "## "; }
+.cm-line.cm-active > span.cm-header-2 > span:not(.cm-selection):before { content: "## "; }
+.cm-line > span.cm-header-2 ~ span.cm-header-2:not(.cm-formatting):before { content: ""; }
+
+.cm-line > span.cm-header-3:not(.cm-formatting):before { content: "### "; }
+.cm-line.cm-active > span.cm-header-3 > span:not(.cm-selection):before { content: "### "; }
+.cm-line > span.cm-header-3 ~ span.cm-header-3:not(.cm-formatting):before { content: ""; }
+
+.cm-line > span.cm-header-4:not(.cm-formatting):before { content: "#### "; }
+.cm-line.cm-active > span.cm-header-4 > span:not(.cm-selection):before { content: "#### "; }
+.cm-line > span.cm-header-4 ~ span.cm-header-4:not(.cm-formatting):before { content: ""; }
+
+.cm-line > span.cm-header-5:not(.cm-formatting):before { content: "##### "; }
+.cm-line.cm-active > span.cm-header-5 > span:not(.cm-selection):before { content: "##### "; }
+.cm-line > span.cm-header-5 ~ span.cm-header-5:not(.cm-formatting):before { content: ""; }
+
+.cm-line > span.cm-header-6:not(.cm-formatting):before { content: "###### "; }
+.cm-line.cm-active > span.cm-header-6 > span:not(.cm-selection):before { content: "###### "; }
+.cm-line > span.cm-header-6 ~ span.cm-header-6:not(.cm-formatting):before { content: ""; }
+```

@@ -362,3 +362,5 @@ If you need to have H1 headings capitalized in the note text, use:
     text-transform: uppercase;
 }
 ```
+
+# In Live Preview, show hashes

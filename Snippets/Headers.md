@@ -19,6 +19,13 @@ h6 {
 }
 ```
 
+```
+/* Selection the first H1 header of the Note */
+pre:nth-of-type(2).HyperMD-header.HyperMD-header-1 {
+    color: red;
+}
+```
+
 ```css
 /* Change just 1 particular header */
 /* Note: gap between 1st and 2nd line must be put in ! */

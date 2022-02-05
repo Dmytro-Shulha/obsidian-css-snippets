@@ -1,4 +1,5 @@
 # Resizable Mermaid Diagrams
+[Here is the original FR: Ability to resize and align mermaid diagrams](https://forum.obsidian.md/t/ability-to-resize-and-align-mermaid-diagrams/7019/22)
 
 ```css
 svg[id^="m"][width][height][viewBox] {

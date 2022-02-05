@@ -30,7 +30,7 @@ blockquote {
 ```
 
 ## Blockquote as per Obsidianite
-/* in Edit mode
+/* in Edit mode */
 ```css
 .cm-quote {
     color: var(--text-normal) !important;

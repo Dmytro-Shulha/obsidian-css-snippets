@@ -1,7 +1,9 @@
 /* SYNTAX TO USE IN YOUR NOTE:
-<i id="roundedbox"> **Bold**: name<br>
-	**Children**: Tom, Dick<br>
-	**Address**: stone road 2</i>
+<i id="roundedbox">
+<em>Bold</em>: name<br>
+<em>Children</em>: Tom, Dick<br>
+<em>Address</em>: stone road 2
+</i>
 */
 
 i#roundedbox {

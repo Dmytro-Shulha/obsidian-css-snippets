@@ -65,7 +65,7 @@ cssclass: test
 }
   
 /* Set color of italic text */
-.cm-em, em {
+.cm-s-obsidian .cm-em, em {
   color: goldenrod;
 }
 ```

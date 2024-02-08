@@ -40,7 +40,7 @@
 }
 
 /* align vertically with header */
-cm-s-obsidian .HyperMD-header {
+.cm-s-obsidian .HyperMD-header {
   padding-top:0.125em;
   padding-bottom:0.125em;
 } 

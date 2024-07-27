@@ -9,3 +9,8 @@ I have categorized the snippets on the basis of what they are used for, and have
 Note: the snippets are supplied as they are, and as I am not a CSS expert I cannot assist in fixing errors that might occur if e.g. there are clashes with other parts of your CSS.
 
 **If there’s an interesting piece of code you think is missing you made add it with a pull request in the Github repository (provided you have a Github account), or post it here and I’ll add it.**
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Dmytro-Shulha/obsidian-css-snippets&type=Date)](https://star-history.com/#Dmytro-Shulha/obsidian-css-snippets&Date)
